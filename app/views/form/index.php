@@ -13,7 +13,6 @@ unset($_SESSION['habilidad_error']);
     <?php endif; ?>
     <?php if ($editando): ?>
         <form action="index.php?route=update_skill" method="POST" id="studentForm" autocomplete="on">
-            <h2 class="auth-title"> <?= $tr['main_skill'] ?? 'Habilidad principal' ?> </h2>
             <div class="input-group">
                 <label for="habilidad" style="display:none;"></label>
                 <input type="text" id="habilidad" name="habilidad" required autocomplete="off" value="<?= htmlspecialchars($habilidad_principal) ?>" style="text-align:center;font-size:1.3rem;">
@@ -24,17 +23,12 @@ unset($_SESSION['habilidad_error']);
             </div>
         </form>
     <?php elseif ($yaTieneHabilidad): ?>
-        <h2 class="auth-title"> <?= $tr['main_skill'] ?? 'Habilidad principal' ?> </h2>
         <div class="input-group">
             <label style="display:none;"></label>
             <input type="text" value="<?= htmlspecialchars($habilidad_principal) ?>" disabled style="text-align:center;font-size:1.3rem;">
         </div>
-        <div class="auth-link">
-            <a href="index.php?route=home" class="button" style="background:#b0bec5;color:#232526;min-width:120px;"> <?= $tr['back'] ?? 'Atrás' ?> </a>
-        </div>
     <?php else: ?>
         <form action="index.php?route=save_student" method="POST" id="studentForm" autocomplete="on">
-            <h2 class="auth-title"> <?= $tr['main_skill'] ?? 'Habilidad principal' ?> </h2>
             <div class="input-group">
                 <label for="habilidad"><span class="material-symbols-outlined">star</span> <?= $tr['main_skill'] ?? 'Habilidad' ?></label>
                 <input type="text" id="habilidad" name="habilidad" required autocomplete="off">
