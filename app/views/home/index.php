@@ -34,7 +34,7 @@ if ($usuario_id && !empty($estudiantes)) {
                     <a href="index.php?route=delete_skill" class="button danger sm" onclick="return showDeleteConfirm(event);"> <?= $tr['delete_btn'] ?? 'Eliminar' ?> </a>
                 </div>
                 <div style="display:flex; justify-content:center; margin-top:16px;">
-                    <a href="index.php?route=download_pdf" class="button gradient-btn" style="min-width:180px;">
+                    <a href="index.php?route=download_pdf" class="button gradient-btn sm" style="min-width:100px;">
                         <?= $tr['download_pdf'] ?? 'Descargar PDF' ?>
                     </a>
                 </div>
