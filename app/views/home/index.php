@@ -16,36 +16,33 @@ if ($usuario_id && !empty($estudiantes)) {
     }
 }
 ?>
-<div class="home-actions" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+<div class="home-actions" style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px;margin-bottom:32px;">
     <?php if ($usuario_id && !$tieneHabilidad): ?>
         <a href="index.php?route=show_form" class="button gradient-btn"><?= $tr['main_skill'] ?? 'Habilidad' ?></a>
     <?php endif; ?>
-    <!-- Botón Descargar PDF eliminado de aquí -->
 </div>
 <div class="cards-grid">
 <?php if (!empty($estudiantes)): ?>
     <?php foreach ($estudiantes as $estudiante): ?>
         <div class="futuristic-card">
             <div class="name"><?= htmlspecialchars($estudiante['nombre']) ?></div>
-            <div class="email"><?= htmlspecialchars($estudiante['email']) ?></div>
-            <div class="skill">
-                <?= htmlspecialchars($estudiante['habilidad_principal']) ?>
-                <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $estudiante['usuario_id']): ?>
-                    <div style="margin-top:8px; display:flex; gap:10px; justify-content:center;">
-                        <a href="index.php?route=edit_skill" class="button" style="padding:6px 14px;font-size:0.95rem;"> <?= $tr['edit_btn'] ?? 'Modificar' ?> </a>
-                        <a href="index.php?route=delete_skill" class="button" style="padding:6px 14px;font-size:0.95rem;background:#e53935;" onclick="return showDeleteConfirm(event);"> <?= $tr['delete_btn'] ?? 'Eliminar' ?> </a>
-                    </div>
-                    <div style="display:flex; justify-content:center; margin-top:14px;">
-                        <a href="index.php?route=download_pdf" class="button gradient-btn" style="background:linear-gradient(90deg,#43cea2 0%,#185a9d 100%);min-width:180px;">
-                            <?= $tr['download_pdf'] ?? 'Descargar PDF' ?>
-                        </a>
-                    </div>
-                <?php endif; ?>
-            </div>
+            <div class="email"> <?= htmlspecialchars($estudiante['email']) ?> </div>
+            <div class="skill"> <?= htmlspecialchars($estudiante['habilidad_principal']) ?> </div>
+            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $estudiante['usuario_id']): ?>
+                <div style="margin-top:12px; display:flex; gap:12px; justify-content:center;">
+                    <a href="index.php?route=edit_skill" class="button gradient-btn"> <?= $tr['edit_btn'] ?? 'Modificar' ?> </a>
+                    <a href="index.php?route=delete_skill" class="button danger" onclick="return showDeleteConfirm(event);"> <?= $tr['delete_btn'] ?? 'Eliminar' ?> </a>
+                </div>
+                <div style="display:flex; justify-content:center; margin-top:16px;">
+                    <a href="index.php?route=download_pdf" class="button gradient-btn" style="min-width:180px;">
+                        <?= $tr['download_pdf'] ?? 'Descargar PDF' ?>
+                    </a>
+                </div>
+            <?php endif; ?>
         </div>
     <?php endforeach; ?>
 <?php else: ?>
-    <div style="color:#00bcd4; font-size:1.2rem;">No hay estudiantes registrados.</div>
+    <div style="color:#00bcd4; font-size:1.2rem; text-align:center; margin:32px auto;">No hay estudiantes registrados.</div>
 <?php endif; ?>
 </div>
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>
@@ -55,7 +52,7 @@ function showDeleteConfirm(event) {
     const modal = document.createElement('div');
     modal.style.position = 'fixed';
     modal.style.top = 0;
-    modal.style.left = 0;    composer install
+    modal.style.left = 0;
     modal.style.width = '100vw';
     modal.style.height = '100vh';
     modal.style.background = 'rgba(0,0,0,0.45)';

@@ -5,7 +5,7 @@ require_once __DIR__ . '/../layouts/header.php';
 ?>
 <div class="auth-card">
     <form action="index.php?route=do_register" method="POST" id="registerForm" autocomplete="on">
-        <h2 class="auth-title"><?= $tr['register'] ?? 'Registrarse' ?></h2>
+        <h2 class="auth-title"> <?= $tr['register'] ?? 'Registrarse' ?> </h2>
         <div class="input-group">
             <label for="nombre"><span class="material-symbols-outlined">person</span> <?= $tr['name'] ?? 'Nombre' ?></label>
             <input type="text" id="nombre" name="nombre" required autocomplete="name">
@@ -18,7 +18,7 @@ require_once __DIR__ . '/../layouts/header.php';
             <label for="password"><span class="material-symbols-outlined">lock</span> <?= $tr['password'] ?? 'Contraseña' ?></label>
             <input type="password" id="password" name="password" required autocomplete="new-password">
         </div>
-        <button type="submit" class="auth-btn gradient-btn"><?= $tr['register'] ?? 'Registrarse' ?></button>
+        <button type="submit" class="auth-btn gradient-btn"> <?= $tr['register'] ?? 'Registrarse' ?> </button>
         <div class="auth-link">
             <a href="index.php?route=login">¿Ya tienes cuenta? <?= $tr['login'] ?? 'Inicia sesión' ?></a>
         </div>

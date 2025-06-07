@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+// Sugerencia: Si usas Apache, agrega un .htaccess para redirigir todas las rutas a index.php
+// RewriteEngine On
+// RewriteCond %{REQUEST_FILENAME} !-f
+// RewriteCond %{REQUEST_FILENAME} !-d
+// RewriteRule ^ index.php [QSA,L]
+
 $route = $_GET['route'] ?? 'home';
 $routes = require __DIR__ . '/config/routes.php';
 
@@ -23,4 +29,4 @@ if (isset($routes[$route])) {
 }
 
 http_response_code(404);
-echo "<h1>Error 404: Página no encontrada</h1>";
+echo "<h1 style='color:#e53935;text-align:center;margin-top:60px;font-family:Montserrat,sans-serif;'>Error 404: Página no encontrada</h1>";
