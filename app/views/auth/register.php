@@ -1,7 +1,7 @@
 <?php
 // app/views/auth/register.php
 // Vista de registro de usuario con soporte para idioma y temas
-require_once '../app/views/layouts/header.php';
+require_once __DIR__ . '/../layouts/header.php';
 ?>
 <div class="auth-card">
     <form action="index.php?route=do_register" method="POST" id="registerForm" autocomplete="on">
@@ -37,6 +37,4 @@ require_once '../app/views/layouts/header.php';
         }
     });
 </script>
-<?php
-require_once '../app/views/layouts/footer.php';
-?>
+<?php require_once __DIR__ . '/../layouts/footer.php'; ?>

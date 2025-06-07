@@ -2,7 +2,7 @@
 session_start();
 
 $route = $_GET['route'] ?? 'home';
-$routes = require __DIR__ . '/../config/routes.php';
+$routes = require __DIR__ . '/config/routes.php';
 
 // Autocarga simple de controladores
 foreach ([
@@ -10,7 +10,7 @@ foreach ([
     'FormController',
     'AuthController'
 ] as $ctrl) {
-    require_once __DIR__ . "/../app/controllers/{$ctrl}.php";
+    require_once __DIR__ . "/app/controllers/{$ctrl}.php";
 }
 
 if (isset($routes[$route])) {

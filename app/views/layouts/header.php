@@ -129,3 +129,6 @@ $lang = $lang ?? ($_SESSION['lang'] ?? 'es');
                 <a href="index.php?route=register"><?= $tr['register'] ?? 'Registrarse' ?></a>
             <?php endif; ?>
         </nav>
+        <?php // Si hay includes o requires, usar rutas relativas desde la raíz, por ejemplo:
+        // require_once __DIR__ . '/footer.php';
+        ?>
