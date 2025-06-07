@@ -136,6 +136,30 @@ nav a:hover {
 .button.danger:hover, .gradient-btn.danger:hover {
     background: linear-gradient(90deg, #ff1744 0%, #e53935 100%);
 }
+/* Botón secundario (gris) */
+.button.secondary, .gradient-btn.secondary {
+    background: #b0bec5;
+    color: #232526;
+    box-shadow: 0 2px 8px #b0bec555;
+}
+.button.secondary:hover, .gradient-btn.secondary:hover {
+    background: #90a4ae;
+    color: #232526;
+}
+/* Botón pequeño */
+.button.sm, .gradient-btn.sm, .auth-btn.sm {
+    padding: 8px 18px;
+    font-size: 0.98rem;
+    border-radius: 8px;
+    min-width: 80px;
+}
+/* Botón grande */
+.button.lg, .gradient-btn.lg, .auth-btn.lg {
+    padding: 18px 40px;
+    font-size: 1.25rem;
+    border-radius: 18px;
+    min-width: 160px;
+}
 
 table {
     width: 100%;
