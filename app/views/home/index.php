@@ -30,8 +30,8 @@ if ($usuario_id && !empty($estudiantes)) {
             <div class="skill"> <?= htmlspecialchars($estudiante['habilidad_principal']) ?> </div>
             <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $estudiante['usuario_id']): ?>
                 <div style="margin-top:12px; display:flex; gap:12px; justify-content:center;">
-                    <a href="index.php?route=edit_skill" class="button gradient-btn"> <?= $tr['edit_btn'] ?? 'Modificar' ?> </a>
-                    <a href="index.php?route=delete_skill" class="button danger" onclick="return showDeleteConfirm(event);"> <?= $tr['delete_btn'] ?? 'Eliminar' ?> </a>
+                    <a href="index.php?route=edit_skill" class="button gradient-btn sm"> <?= $tr['edit_btn'] ?? 'Modificar' ?> </a>
+                    <a href="index.php?route=delete_skill" class="button danger sm" onclick="return showDeleteConfirm(event);"> <?= $tr['delete_btn'] ?? 'Eliminar' ?> </a>
                 </div>
                 <div style="display:flex; justify-content:center; margin-top:16px;">
                     <a href="index.php?route=download_pdf" class="button gradient-btn" style="min-width:180px;">

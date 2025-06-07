@@ -112,6 +112,14 @@ nav a:hover {
     overflow: hidden;
     min-width: 120px;
 }
+.button.sm, a.button.sm, .gradient-btn.sm, .auth-btn.sm {
+    padding: 7px 16px;
+    font-size: 0.98rem;
+    border-radius: 8px;
+    min-width: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .button:hover, a.button:hover, .gradient-btn:hover, .auth-btn:hover {
     background: linear-gradient(90deg, #007cf0 0%, #00bcd4 100%);
     color: #fff;
@@ -148,10 +156,12 @@ nav a:hover {
 }
 /* Botón pequeño */
 .button.sm, .gradient-btn.sm, .auth-btn.sm {
-    padding: 8px 18px;
+    padding: 7px 16px;
     font-size: 0.98rem;
     border-radius: 8px;
-    min-width: 80px;
+    min-width: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 /* Botón grande */
 .button.lg, .gradient-btn.lg, .auth-btn.lg {
