@@ -1,4 +1,4 @@
-# Mini Proyecto MVC - TuPortafolio Básico
+# MiniProyecto MVC - TuPortafolio
 
 Este es un proyecto web básico que implementa el patrón MVC utilizando PHP puro y MySQL. La aplicación permite registrar estudiantes y visualizar una lista de los mismos, con soporte para login, registro, dos idiomas (español/inglés) y dos temas (claro/oscuro).
 
