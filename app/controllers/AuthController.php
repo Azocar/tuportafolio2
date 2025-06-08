@@ -1,7 +1,7 @@
 <?php
 // app/controllers/AuthController.php
 // Controlador para autenticación de usuarios (login, registro, logout)
-// Codificación UTF-8 y comentarios en español
+// Codificación UTF-8
 require_once __DIR__ . '/../models/DatabaseModel.php';
 
 class AuthController {
